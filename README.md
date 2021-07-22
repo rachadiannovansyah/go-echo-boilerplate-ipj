@@ -49,29 +49,27 @@ Now, you are able to make requests which require authentication.
 
 4. **/deploy** contains the container (Docker) package configuration and template(docker-compose) for project deployment.
 
-5. **/development** includes Docker and docker-compose files for setup linter.
+5. **/migrations** has files for run migrations.
 
-6. **/migrations** has files for run migrations.
+6. **/models** includes structures describing data models.
 
-7. **/models** includes structures describing data models.
+7. **/repositories** contains methods for selecting entities from the database.
 
-8. **/repositories** contains methods for selecting entities from the database.
+8. **/requests** has structures describing the parameters of incoming requests, and validator.
 
-9. **/requests** has structures describing the parameters of incoming requests, and validator.
+9. **/responses** includes structures describing the parameters of outgoing response.
 
-10. **/responses** includes structures describing the parameters of outgoing response.
+10. **/server** is the main project folder. This folder contains the executable server.go.
 
-11. **/server** is the main project folder. This folder contains the executable server.go.
+11. **/server/builders** contains builders for initializing entities.
 
-12. **/server/builders** contains builders for initializing entities.
+12. **/server/handlers** contains request handlers.
 
-13. **/server/handlers** contains request handlers.
+13. **/server/routes** has a file for configuring routes.
 
-14. **/server/routes** has a file for configuring routes.
+14. **/services** contains methods for creating entities.
 
-15. **/services** contains methods for creating entities.
-
-16. **/tests**  includes tests and test data.
+15. **/tests**  includes tests and test data.
 
 ## Code quality
 For control code quality we are use [golangci-lint](https://github.com/golangci/golangci-lint).
