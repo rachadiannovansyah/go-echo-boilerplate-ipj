@@ -1,10 +1,11 @@
 package main
 
 import (
-	application "echo-demo-project"
-	"echo-demo-project/config"
-	"echo-demo-project/docs"
 	"fmt"
+
+	application "github.com/khihadysucahyo/go-echo-boilerplate"
+	"github.com/khihadysucahyo/go-echo-boilerplate/config"
+	"github.com/swaggo/swag/example/basic/docs"
 )
 
 // @securityDefinitions.apikey ApiKeyAuth
