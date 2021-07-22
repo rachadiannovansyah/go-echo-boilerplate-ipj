@@ -1,8 +1,9 @@
 package token
 
 import (
-	"echo-demo-project/models"
 	"time"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/models"
 
 	"github.com/dgrijalva/jwt-go"
 )

@@ -1,14 +1,18 @@
 package tests
 
 import (
-	"echo-demo-project/requests"
-	"echo-demo-project/server"
-	"echo-demo-project/server/handlers"
-	"echo-demo-project/tests/helpers"
-	"github.com/labstack/echo/v4"
-	"github.com/stretchr/testify/assert"
 	"net/http"
 	"testing"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/tests/helpers"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/server/handlers"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/server"
+	"github.com/labstack/echo/v4"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestWalkRegister(t *testing.T) {
@@ -46,7 +50,7 @@ func TestWalkRegister(t *testing.T) {
 					Email:    "name@test.com",
 					Password: "password",
 				},
-				Name:     "",
+				Name: "",
 			},
 			handlerFunc,
 			nil,
@@ -63,7 +67,7 @@ func TestWalkRegister(t *testing.T) {
 					Email:    "name@test.com",
 					Password: "passw",
 				},
-				Name:     "name",
+				Name: "name",
 			},
 			handlerFunc,
 			nil,
@@ -80,7 +84,7 @@ func TestWalkRegister(t *testing.T) {
 					Email:    "duplicated@test.com",
 					Password: "password",
 				},
-				Name:     "Another Name",
+				Name: "Another Name",
 			},
 			handlerFunc,
 			&helpers.QueryMock{

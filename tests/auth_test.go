@@ -1,24 +1,32 @@
 package tests
 
 import (
-	"echo-demo-project/config"
-	"echo-demo-project/models"
-	"echo-demo-project/requests"
-	"echo-demo-project/responses"
-	"echo-demo-project/server"
-	"echo-demo-project/server/handlers"
-	"echo-demo-project/services/token"
-	"echo-demo-project/tests/helpers"
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/dgrijalva/jwt-go"
-	"github.com/labstack/echo/v4"
-	"github.com/stretchr/testify/assert"
-	"golang.org/x/crypto/bcrypt"
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/tests/helpers"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/services/token"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/server/handlers"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/server"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/responses"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/models"
+
+	"github.com/dgrijalva/jwt-go"
+	"github.com/khihadysucahyo/go-echo-boilerplate/config"
+	"github.com/labstack/echo/v4"
+	"github.com/stretchr/testify/assert"
+	"golang.org/x/crypto/bcrypt"
 )
 
 func TestWalkAuth(t *testing.T) {
@@ -36,7 +44,7 @@ func TestWalkAuth(t *testing.T) {
 		Reply: helpers.MockReply{{"id": helpers.UserId, "email": "name@test.com", "name": "User Name", "password": encryptedPassword}},
 	}
 
-	cases := []helpers.TestCase {
+	cases := []helpers.TestCase{
 		{
 			"Auth success",
 			request,
@@ -124,14 +132,14 @@ func TestWalkRefresh(t *testing.T) {
 	notExistUser.ID = helpers.UserId + 1
 	notExistToken, _ := tokenService.CreateRefreshToken(&notExistUser)
 
-	invalidToken := validToken[1:len(validToken)-1]
+	invalidToken := validToken[1 : len(validToken)-1]
 
 	commonMock := &helpers.QueryMock{
 		Query: `SELECT * FROM "users"  WHERE "users"."deleted_at" IS NULL AND (("users"."id" = 1))`,
 		Reply: helpers.MockReply{{"id": helpers.UserId, "name": "User Name"}},
 	}
 
-	cases := []helpers.TestCase {
+	cases := []helpers.TestCase{
 		{
 			"Refresh success",
 			request,

@@ -1,14 +1,20 @@
 package handlers
 
 import (
-	"echo-demo-project/models"
-	"echo-demo-project/repositories"
-	"echo-demo-project/requests"
-	"echo-demo-project/responses"
-	s "echo-demo-project/server"
-	tokenservice "echo-demo-project/services/token"
 	"fmt"
 	"net/http"
+
+	tokenservice "github.com/khihadysucahyo/go-echo-boilerplate/services/token"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+
+	s "github.com/khihadysucahyo/go-echo-boilerplate/server"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/responses"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/repositories"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/models"
 
 	jwtGo "github.com/dgrijalva/jwt-go"
 	"github.com/labstack/echo/v4"

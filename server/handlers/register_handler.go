@@ -1,13 +1,19 @@
 package handlers
 
 import (
-	"echo-demo-project/models"
-	"echo-demo-project/repositories"
-	"echo-demo-project/requests"
-	"echo-demo-project/responses"
-	s "echo-demo-project/server"
-	"echo-demo-project/services/user"
 	"net/http"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/services/user"
+
+	s "github.com/khihadysucahyo/go-echo-boilerplate/server"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/responses"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/repositories"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/models"
 
 	"github.com/labstack/echo/v4"
 )

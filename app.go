@@ -1,12 +1,14 @@
 package application
 
 import (
-	"echo-demo-project/config"
-	"echo-demo-project/server"
-	"echo-demo-project/server/routes"
 	"log"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/config"
+	"github.com/khihadysucahyo/go-echo-boilerplate/server"
+	"github.com/khihadysucahyo/go-echo-boilerplate/server/routes"
 )
 
+// Start func
 func Start(cfg *config.Config) {
 	app := server.NewServer(cfg)
 

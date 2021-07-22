@@ -1,7 +1,7 @@
 package user
 
 import (
-	"echo-demo-project/requests"
+	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
 
 	"github.com/jinzhu/gorm"
 )

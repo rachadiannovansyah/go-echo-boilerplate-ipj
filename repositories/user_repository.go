@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"echo-demo-project/models"
+	"github.com/khihadysucahyo/go-echo-boilerplate/models"
 
 	"github.com/jinzhu/gorm"
 )

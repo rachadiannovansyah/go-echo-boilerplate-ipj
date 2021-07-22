@@ -1,8 +1,9 @@
 package user
 
 import (
-	"echo-demo-project/requests"
-	"echo-demo-project/server/builders"
+	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/server/builders"
 
 	"golang.org/x/crypto/bcrypt"
 )

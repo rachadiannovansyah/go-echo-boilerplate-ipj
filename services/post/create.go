@@ -1,6 +1,6 @@
 package post
 
-import "echo-demo-project/models"
+import "github.com/khihadysucahyo/go-echo-boilerplate/models"
 
 func (postService *Service) Create(post *models.Post) {
 	postService.DB.Create(post)

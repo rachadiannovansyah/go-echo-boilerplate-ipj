@@ -1,8 +1,9 @@
 package server
 
 import (
-	"echo-demo-project/config"
-	"echo-demo-project/db"
+	"github.com/khihadysucahyo/go-echo-boilerplate/config"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/db"
 
 	"github.com/jinzhu/gorm"
 	"github.com/labstack/echo/v4"

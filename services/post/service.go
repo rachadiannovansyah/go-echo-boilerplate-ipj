@@ -1,8 +1,8 @@
 package post
 
 import (
-	"echo-demo-project/models"
-	"echo-demo-project/requests"
+	"github.com/khihadysucahyo/go-echo-boilerplate/models"
+	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
 
 	"github.com/jinzhu/gorm"
 )

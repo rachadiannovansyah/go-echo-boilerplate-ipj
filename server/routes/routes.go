@@ -1,10 +1,13 @@
 package routes
 
 import (
-	s "echo-demo-project/server"
-	"echo-demo-project/server/handlers"
-	"echo-demo-project/services/token"
 	"fmt"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/services/token"
+
+	s "github.com/khihadysucahyo/go-echo-boilerplate/server"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/server/handlers"
 
 	"github.com/labstack/echo/v4/middleware"
 	echoSwagger "github.com/swaggo/echo-swagger"

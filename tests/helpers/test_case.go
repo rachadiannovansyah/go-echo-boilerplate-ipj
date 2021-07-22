@@ -1,17 +1,18 @@
 package helpers
 
 import (
-	"echo-demo-project/server"
 	"encoding/json"
-	"github.com/labstack/echo/v4"
-	mocket "github.com/selvatico/go-mocket"
 	"net/http/httptest"
 	"strings"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/server"
+	"github.com/labstack/echo/v4"
+	mocket "github.com/selvatico/go-mocket"
 )
 
 const UserId = 1
 
-type TestCase struct{
+type TestCase struct {
 	TestName    string
 	Request     Request
 	RequestBody interface{}

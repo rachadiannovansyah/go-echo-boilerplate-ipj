@@ -1,16 +1,21 @@
 package tests
 
 import (
-	"echo-demo-project/requests"
-	"echo-demo-project/server"
-	"echo-demo-project/server/handlers"
-	"echo-demo-project/services/token"
-	"echo-demo-project/tests/helpers"
-	"github.com/dgrijalva/jwt-go"
-	"github.com/labstack/echo/v4"
-	"github.com/stretchr/testify/assert"
 	"net/http"
 	"testing"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/tests/helpers"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/services/token"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/server/handlers"
+
+	"github.com/khihadysucahyo/go-echo-boilerplate/server"
+
+	"github.com/dgrijalva/jwt-go"
+	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+	"github.com/labstack/echo/v4"
+	"github.com/stretchr/testify/assert"
 )
 
 const postId = "1"
@@ -65,7 +70,7 @@ func TestWalkPostsCrud(t *testing.T) {
 		Reply: helpers.MockReply{{"id": 1, "title": "title", "content": "content", "username": "Username"}},
 	}
 
-	cases := []helpers.TestCase {
+	cases := []helpers.TestCase{
 		{
 			"Create post success",
 			requestCreate,
