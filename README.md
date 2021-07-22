@@ -109,4 +109,4 @@ Mocking db - https://github.com/selvatico/go-mocket
 Orm - https://github.com/jinzhu/gorm
 
 ## License
-The project is developed by Backend Ceria
+The project is developed by **JDS Backend Ceria**
