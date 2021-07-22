@@ -1,0 +1,27 @@
+FROM golang:1.15.0-alpine3.12 AS builder
+
+ENV GO111MODULE=on
+ENV PORT=4000
+
+# Download dependencies
+WORKDIR /usr/src/app
+COPY go.mod .
+COPY go.sum .
+RUN go mod download
+
+# Copy the code from the host and build it
+COPY . /usr/src/app
+RUN CGO_ENABLED=0 GOOS=linux go build -o /app ./main.go
+
+# Copy binary into second stage and run app
+# trying using distroless because small image
+# FROM gcr.io/distroless/base-debian10 
+
+# apline image 
+FROM alpine
+
+RUN apk add --no-cache ca-certificates && update-ca-certificates
+COPY --from=builder /app ./
+COPY .env ./
+EXPOSE $PORT
+CMD [ "./app" ]
