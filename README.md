@@ -1,5 +1,5 @@
 # Overview
-It's an API Skeleton project based on Echo framework.
+It's an API project based on Echo framework.
 Our aim is reducing development time on default features that you can meet very often when your work on API.
 There is a useful set of tools that described below. Feel free to contribute!
 
