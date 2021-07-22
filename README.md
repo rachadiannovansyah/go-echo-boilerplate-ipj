@@ -111,4 +111,4 @@ Mocking db - https://github.com/selvatico/go-mocket
 Orm - https://github.com/jinzhu/gorm
 
 ## License
-The project is developed by [NIX Solutions](http://nixsolutions.com) Go team and distributed under [MIT LICENSE](https://github.com/nixsolutions/golang-echo-boilerplate/blob/master/LICENSE)
+The project is developed by Backend Ceria
