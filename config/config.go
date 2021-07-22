@@ -12,9 +12,10 @@ type Config struct {
 	HTTP HTTPConfig
 }
 
+// NewConfig func
 func NewConfig() *Config {
-	err := godotenv.Load()
-	if err != nil {
+	switch godotenv.Load() {
+	case godotenv.Load("../.env"):
 		log.Println("Error loading .env file")
 	}
 
