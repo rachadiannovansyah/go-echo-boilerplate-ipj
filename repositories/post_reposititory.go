@@ -10,7 +10,6 @@ type PostRepositoryQ interface {
 	GetPosts(posts *[]models.Post)
 	GetPost(post *models.Post, id int)
 }
-
 type PostRepository struct {
 	DB *gorm.DB
 }
