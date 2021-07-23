@@ -5,7 +5,7 @@ import (
 
 	application "github.com/khihadysucahyo/go-echo-boilerplate"
 	"github.com/khihadysucahyo/go-echo-boilerplate/config"
-	"github.com/swaggo/swag/example/basic/docs"
+	"github.com/khihadysucahyo/go-echo-boilerplate/docs"
 )
 
 // @securityDefinitions.apikey ApiKeyAuth
