@@ -1,3 +1,7 @@
+![ci workflow](https://github.com/khihadysucahyo/go-echo-boilerplate/actions/workflows/ci.yml/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b55f79729435efcc46f9/maintainability)](https://codeclimate.com/github/khihadysucahyo/go-echo-boilerplate/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b55f79729435efcc46f9/test_coverage)](https://codeclimate.com/github/khihadysucahyo/go-echo-boilerplate/test_coverage)
+
 # Overview
 It's an API project based on Echo framework.
 Our aim is reducing development time on default features that you can meet very often when your work on API.
@@ -110,3 +114,4 @@ Orm - https://github.com/jinzhu/gorm
 
 ## License
 The project is developed by **JDS Backend Ceria**
+
