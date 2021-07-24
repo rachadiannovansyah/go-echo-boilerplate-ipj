@@ -1,7 +1,7 @@
 version: '3.7'
 services:
-  echo_app:
-    container_name: echo_demo
+  api:
+    container_name: api
     build: .
     ports:
       - ${EXPOSE_PORT}:${PORT}
@@ -9,7 +9,7 @@ services:
     volumes:
       - ./:/app/
     depends_on:
-      - echo_mysql
+      - mysql
     env_file:
       - .env
     environment:
@@ -17,12 +17,11 @@ services:
       - WAIT_HOSTS=${DB_HOST}:${DB_PORT}
       - WAIT_BEFORE_HOSTS=15
       - WAIT_SLEEP_INTERVAL=3
-    networks:
-      - echo-demo-stack
 
-  echo_mysql:
+  mysql:
     image: mysql:5.7
-    container_name: echo_db
+    container_name: mysql
+    platform: linux/amd64 
     ports:
       - ${EXPOSE_DB_PORT}:${DB_PORT}
     environment:
@@ -32,13 +31,7 @@ services:
       - MYSQL_DATABASE=${DB_NAME}
       - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
     volumes:
-      - database_mysql:/var/lib/mysql
-    networks:
-      - echo-demo-stack
+      - mysql:/var/lib/mysql    
 
 volumes:
-  database_mysql:
-
-networks:
-  echo-demo-stack:
-    driver: bridge
+  mysql:
