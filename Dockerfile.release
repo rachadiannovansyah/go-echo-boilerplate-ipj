@@ -1,7 +1,7 @@
 FROM golang:1.15.0-alpine3.12 AS builder
 
 ENV GO111MODULE=on
-ENV PORT=4000
+ENV PORT=7788
 
 # Download dependencies
 WORKDIR /usr/src/app
@@ -11,7 +11,7 @@ RUN go mod download
 
 # Copy the code from the host and build it
 COPY . /usr/src/app
-RUN CGO_ENABLED=0 GOOS=linux go build -o /app ./main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -o /app ./cmd/main.go
 
 # Copy binary into second stage and run app
 # trying using distroless because small image
@@ -20,6 +20,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /app ./main.go
 # apline image 
 FROM alpine
 
+ENV TZ=Asia/Jakarta
 RUN apk add --no-cache ca-certificates && update-ca-certificates
 COPY --from=builder /app ./
 COPY .env ./
