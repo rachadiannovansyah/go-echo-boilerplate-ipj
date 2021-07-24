@@ -2,4 +2,3 @@ main
 .env
 .env.testing
 /.idea
-docs
