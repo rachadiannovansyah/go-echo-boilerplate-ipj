@@ -1,4 +1,6 @@
+docs
 main
 .env
 .env.testing
 /.idea
+*.out

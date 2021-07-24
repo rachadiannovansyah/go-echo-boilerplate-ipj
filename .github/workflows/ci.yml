@@ -15,6 +15,12 @@ jobs:
       uses: actions/setup-go@v2
       with:
         go-version: 1.16
+    
+    - name: setup swag
+      run: go get github.com/swaggo/swag/cmd/swag
+
+    - name: Build
+      run: swag init -g ./cmd/main.go
 
     - name: Build
       run: go build -v ./cmd/main.go
