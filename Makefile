@@ -1,5 +1,14 @@
 lint_docker_compose_file = "./development/golangci_lint/docker-compose.yml"
 
+run:
+	@echo "🌀 running app..."
+	go run ./cmd/main.go
+
+migrate:
+	@echo "🌀 ️migrating database..."
+	go run ./migrations/entry.go
+	@echo "✔️  database migrated"
+
 lint-build:
 	@echo "🌀 ️container are building..."
 	@docker-compose --file=$(lint_docker_compose_file) build -q
