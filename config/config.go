@@ -7,9 +7,10 @@ import (
 )
 
 type Config struct {
-	Auth AuthConfig
-	DB   DBConfig
-	HTTP HTTPConfig
+	Auth   AuthConfig
+	DB     DBConfig
+	HTTP   HTTPConfig
+	Sentry SentryConfig
 }
 
 // NewConfig func
@@ -20,8 +21,9 @@ func NewConfig() *Config {
 	}
 
 	return &Config{
-		Auth: LoadAuthConfig(),
-		DB:   LoadDBConfig(),
-		HTTP: LoadHTTPConfig(),
+		Auth:   LoadAuthConfig(),
+		DB:     LoadDBConfig(),
+		HTTP:   LoadHTTPConfig(),
+		Sentry: LoadSentryConfig(),
 	}
 }

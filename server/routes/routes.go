@@ -3,10 +3,10 @@ package routes
 import (
 	"fmt"
 
+	sentryecho "github.com/getsentry/sentry-go/echo"
 	"github.com/khihadysucahyo/go-echo-boilerplate/services/token"
 
 	s "github.com/khihadysucahyo/go-echo-boilerplate/server"
-
 	"github.com/khihadysucahyo/go-echo-boilerplate/server/handlers"
 
 	"github.com/labstack/echo/v4/middleware"
@@ -19,6 +19,10 @@ func ConfigureRoutes(server *s.Server) {
 	registerHandler := handlers.NewRegisterHandler(server)
 
 	server.Echo.Use(middleware.Logger())
+
+	server.Echo.Use(sentryecho.New(sentryecho.Options{
+		Repanic: true,
+	}))
 
 	server.Echo.GET("/swagger/*", echoSwagger.WrapHandler)
 
