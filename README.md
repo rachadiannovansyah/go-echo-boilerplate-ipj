@@ -1,4 +1,4 @@
-![ci workflow](https://github.com/khihadysucahyo/go-echo-boilerplate/actions/workflows/ci.yml/badge.svg)
+![ci workflow](https://github.com/rachadiannovansyah/go-echo-boilerplate-ipj/actions/workflows/ci.yml/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b55f79729435efcc46f9/maintainability)](https://codeclimate.com/github/khihadysucahyo/go-echo-boilerplate/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b55f79729435efcc46f9/test_coverage)](https://codeclimate.com/github/khihadysucahyo/go-echo-boilerplate/test_coverage)
 
