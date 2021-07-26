@@ -5,25 +5,29 @@ on:
     branches: [ master ]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Set up Go
-      uses: actions/setup-go@v2
-      with:
-        go-version: 1.16
-    
-    - name: setup swag
-      run: go get github.com/swaggo/swag/cmd/swag
-
-    - name: Build
-      run: swag init -g ./cmd/main.go
-
-    - name: Build
-      run: go build -v ./cmd/main.go
-
-    - name: Test
-      run: go test -v ./...
+      - uses: actions/checkout@v2
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.16
+      - name: Set up Swag
+        run: go get github.com/swaggo/swag/cmd/swag
+      - name: Build Swag
+        run: swag init -g ./cmd/main.go
+      - name: Build main App
+        run: go build -v ./cmd/main.go
+  
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        go: ["1.15"]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v1
+      - name: Run test
+        run: go test -v ./...
