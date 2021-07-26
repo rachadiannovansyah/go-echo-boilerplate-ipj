@@ -90,6 +90,14 @@ violations of generally accepted code style
 ### How to use
 Linter tool wrapped to docker-compose and first of all need to build container with linters
 
+- `make run`
+
+To run project by makeFile
+
+- `make migrate`
+
+To migrate already migrations
+
 - `make lint-build`
 
 Next you need to run linter to check bugs ant errors
