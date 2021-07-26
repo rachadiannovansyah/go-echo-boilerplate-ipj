@@ -31,3 +31,13 @@ jobs:
       - uses: actions/setup-go@v1
       - name: Run test
         run: go test -v ./...
+  
+  coverage:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Coverage
+        run: make coverage
+        env:
+          CC_TEST_REPORTER_ID: ini tinggal isi test report id dari codeclimate gan
