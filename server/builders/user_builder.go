@@ -1,6 +1,6 @@
 package builders
 
-import "github.com/khihadysucahyo/go-echo-boilerplate/models"
+import "github.com/rachadiannovansyah/go-echo-boilerplate-ipj/models"
 
 type UserBuilder struct {
 	email    string

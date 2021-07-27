@@ -3,17 +3,17 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/services/user"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/services/user"
 
-	s "github.com/khihadysucahyo/go-echo-boilerplate/server"
+	s "github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/responses"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/responses"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/requests"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/repositories"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/repositories"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/models"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/models"
 
 	"github.com/labstack/echo/v4"
 )

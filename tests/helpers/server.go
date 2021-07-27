@@ -1,10 +1,10 @@
 package helpers
 
 import (
-	"github.com/khihadysucahyo/go-echo-boilerplate/server"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/config"
 	"github.com/labstack/echo/v4"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/config"
 )
 
 func NewServer() *server.Server {

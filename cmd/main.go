@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	application "github.com/khihadysucahyo/go-echo-boilerplate"
-	"github.com/khihadysucahyo/go-echo-boilerplate/config"
-	"github.com/khihadysucahyo/go-echo-boilerplate/docs"
+	application "github.com/rachadiannovansyah/go-echo-boilerplate-ipj"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/config"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/docs"
 )
 
 // @securityDefinitions.apikey ApiKeyAuth

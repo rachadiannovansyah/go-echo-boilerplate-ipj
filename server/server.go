@@ -1,9 +1,9 @@
 package server
 
 import (
-	"github.com/khihadysucahyo/go-echo-boilerplate/config"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/config"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/db"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/db"
 
 	"github.com/jinzhu/gorm"
 	"github.com/labstack/echo/v4"

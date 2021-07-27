@@ -1,9 +1,9 @@
 package post
 
 import (
-	"github.com/khihadysucahyo/go-echo-boilerplate/models"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/models"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/requests"
 )
 
 func (postService *Service) Update(post *models.Post, updatePostRequest *requests.UpdatePostRequest) {

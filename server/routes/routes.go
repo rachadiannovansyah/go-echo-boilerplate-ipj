@@ -4,10 +4,10 @@ import (
 	"fmt"
 
 	sentryecho "github.com/getsentry/sentry-go/echo"
-	"github.com/khihadysucahyo/go-echo-boilerplate/services/token"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/services/token"
 
-	s "github.com/khihadysucahyo/go-echo-boilerplate/server"
-	"github.com/khihadysucahyo/go-echo-boilerplate/server/handlers"
+	s "github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server/handlers"
 
 	"github.com/labstack/echo/v4/middleware"
 	echoSwagger "github.com/swaggo/echo-swagger"

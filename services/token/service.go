@@ -1,9 +1,9 @@
 package token
 
 import (
-	"github.com/khihadysucahyo/go-echo-boilerplate/config"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/config"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/models"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/models"
 
 	"github.com/dgrijalva/jwt-go"
 )

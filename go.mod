@@ -1,4 +1,4 @@
-module github.com/khihadysucahyo/go-echo-boilerplate
+module github.com/rachadiannovansyah/go-echo-boilerplate-ipj
 
 go 1.12
 

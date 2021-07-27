@@ -4,19 +4,19 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/services/token"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/services/token"
 
-	postservice "github.com/khihadysucahyo/go-echo-boilerplate/services/post"
+	postservice "github.com/rachadiannovansyah/go-echo-boilerplate-ipj/services/post"
 
-	s "github.com/khihadysucahyo/go-echo-boilerplate/server"
+	s "github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/responses"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/responses"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/requests"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/repositories"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/repositories"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/models"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/models"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/labstack/echo/v4"

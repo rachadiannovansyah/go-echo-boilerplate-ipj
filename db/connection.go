@@ -3,8 +3,8 @@ package db
 import (
 	"fmt"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/config"
-	"github.com/khihadysucahyo/go-echo-boilerplate/db/seeders"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/config"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/db/seeders"
 
 	_ "github.com/go-sql-driver/mysql" // nolint
 	"github.com/jinzhu/gorm"

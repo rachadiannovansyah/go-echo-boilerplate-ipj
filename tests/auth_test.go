@@ -8,23 +8,23 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/tests/helpers"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/tests/helpers"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/services/token"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/services/token"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/server/handlers"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server/handlers"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/server"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/responses"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/responses"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/requests"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/models"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/models"
 
 	"github.com/dgrijalva/jwt-go"
-	"github.com/khihadysucahyo/go-echo-boilerplate/config"
 	"github.com/labstack/echo/v4"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/config"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/crypto/bcrypt"
 )

@@ -1,9 +1,9 @@
 package user
 
 import (
-	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/requests"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/server/builders"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server/builders"
 
 	"golang.org/x/crypto/bcrypt"
 )

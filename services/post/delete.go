@@ -1,6 +1,6 @@
 package post
 
-import "github.com/khihadysucahyo/go-echo-boilerplate/models"
+import "github.com/rachadiannovansyah/go-echo-boilerplate-ipj/models"
 
 func (postService *Service) Delete(post *models.Post) {
 	postService.DB.Delete(post)

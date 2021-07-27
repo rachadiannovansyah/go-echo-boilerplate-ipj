@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"net/http"
 
-	tokenservice "github.com/khihadysucahyo/go-echo-boilerplate/services/token"
+	tokenservice "github.com/rachadiannovansyah/go-echo-boilerplate-ipj/services/token"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/requests"
 
-	s "github.com/khihadysucahyo/go-echo-boilerplate/server"
+	s "github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/responses"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/responses"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/repositories"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/repositories"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/models"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/models"
 
 	jwtGo "github.com/dgrijalva/jwt-go"
 	"github.com/labstack/echo/v4"

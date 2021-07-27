@@ -4,14 +4,14 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/tests/helpers"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/tests/helpers"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/requests"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/requests"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/server/handlers"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server/handlers"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/server"
 	"github.com/labstack/echo/v4"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server"
 	"github.com/stretchr/testify/assert"
 )
 

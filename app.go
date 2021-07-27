@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/getsentry/sentry-go"
-	"github.com/khihadysucahyo/go-echo-boilerplate/config"
-	"github.com/khihadysucahyo/go-echo-boilerplate/server"
-	"github.com/khihadysucahyo/go-echo-boilerplate/server/routes"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/config"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server/routes"
 )
 
 // Start function

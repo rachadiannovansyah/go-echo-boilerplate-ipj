@@ -5,8 +5,8 @@ import (
 	"net/http/httptest"
 	"strings"
 
-	"github.com/khihadysucahyo/go-echo-boilerplate/server"
 	"github.com/labstack/echo/v4"
+	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/server"
 	mocket "github.com/selvatico/go-mocket"
 )
 
