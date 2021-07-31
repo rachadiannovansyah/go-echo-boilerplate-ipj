@@ -19,7 +19,6 @@ func ConfigureRoutes(server *s.Server) {
 	registerHandler := handlers.NewRegisterHandler(server)
 
 	server.Echo.Use(middleware.Logger())
-
 	server.Echo.Use(sentryecho.New(sentryecho.Options{
 		Repanic: true,
 	}))

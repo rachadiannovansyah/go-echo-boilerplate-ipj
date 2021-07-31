@@ -3,7 +3,6 @@ package application
 import (
 	"fmt"
 	"log"
-	"time"
 
 	"github.com/getsentry/sentry-go"
 	"github.com/rachadiannovansyah/go-echo-boilerplate-ipj/config"
@@ -21,7 +20,6 @@ func Start(cfg *config.Config) {
 	}); err != nil {
 		fmt.Printf("Sentry initialization failed: %v\n", err)
 	}
-	defer sentry.Flush(5 * time.Second)
 
 	routes.ConfigureRoutes(app)
 
