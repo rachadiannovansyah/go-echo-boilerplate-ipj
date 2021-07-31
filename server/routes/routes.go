@@ -11,6 +11,8 @@ import (
 
 	"github.com/labstack/echo/v4/middleware"
 	echoSwagger "github.com/swaggo/echo-swagger"
+
+	sentryTransaction "github.com/rachadiannovansyah/go-echo-boilerplate-ipj/middle"
 )
 
 func ConfigureRoutes(server *s.Server) {
@@ -18,6 +20,9 @@ func ConfigureRoutes(server *s.Server) {
 	authHandler := handlers.NewAuthHandler(server)
 	registerHandler := handlers.NewRegisterHandler(server)
 
+	sentryMiddleware := sentryTransaction.InitMiddleware()
+	server.Echo.Use(sentryMiddleware.CORS)
+	server.Echo.Use(sentryMiddleware.SENTRY)
 	server.Echo.Use(middleware.Logger())
 	server.Echo.Use(sentryecho.New(sentryecho.Options{
 		Repanic: true,
