@@ -16,5 +16,6 @@ func getMigrationsList() []gmStore.Migratable {
 		&list.CreateUserTable{},
 		&list.CreatePostTable{},
 		&list.UpdateUserTable{},
+		&list.CreateCategoryTable{},
 	}
 }
