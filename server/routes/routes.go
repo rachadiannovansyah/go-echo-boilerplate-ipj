@@ -17,6 +17,7 @@ import (
 
 func ConfigureRoutes(server *s.Server) {
 	postHandler := handlers.NewPostHandlers(server)
+	categoryHandler := handlers.NewCategoryHandlers(server)
 	authHandler := handlers.NewAuthHandler(server)
 	registerHandler := handlers.NewRegisterHandler(server)
 
@@ -47,4 +48,8 @@ func ConfigureRoutes(server *s.Server) {
 	r.POST("/posts", postHandler.CreatePost)
 	r.DELETE("/posts/:id", postHandler.DeletePost)
 	r.PUT("/posts/:id", postHandler.UpdatePost)
+
+	r.GET("/categories", categoryHandler.GetCategories)
+	r.POST("/categories", categoryHandler.CreateCategory)
+	r.DELETE("/categories/:id", categoryHandler.DeleteCategory)
 }

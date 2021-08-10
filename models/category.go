@@ -6,4 +6,6 @@ type Category struct {
 	gorm.Model
 	Name        string `json:"name" gorm:"type:text"`
 	Description string `json:"description" gorm:"type:text"`
+	UserID      uint
+	User        User `gorm:"foreignkey:UserID"`
 }

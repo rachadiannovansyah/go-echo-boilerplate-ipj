@@ -18,6 +18,12 @@ func (m *CreateCategoryTable) Up(con *sqlx.DB) {
 	table.String("name", 250)
 	table.String("description", 500).Nullable()
 	table.Column("deleted_at").Type("datetime").Nullable()
+	table.Column("user_id").Type("int unsigned")
+	table.ForeignKey("user_id").
+		Reference("users").
+		On("id").
+		OnDelete("cascade").
+		OnUpdate("cascade")
 	table.WithTimestamps()
 
 	table.MustExec()
