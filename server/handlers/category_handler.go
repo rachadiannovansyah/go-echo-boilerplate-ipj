@@ -64,6 +64,33 @@ func (ch *CategoryHandlers) CreateCategory(c echo.Context) error {
 	return responses.MessageResponse(c, http.StatusCreated, "Category has been successfully created!")
 }
 
+func (ch *CategoryHandlers) UpdateCategory(c echo.Context) error {
+	updateCategoryRequest := new(requests.UpdateCategoryRequest)
+	id, _ := strconv.Atoi(c.Param("id"))
+
+	if err := c.Bind(updateCategoryRequest); err != nil {
+		return err
+	}
+
+	if err := updateCategoryRequest.Validate(); err != nil {
+		return responses.ErrorResponse(c, http.StatusBadRequest, "Required fields are empty")
+	}
+
+	category := models.Category{}
+
+	categoryRepository := repositories.NewCategoryRepository(ch.server.DB)
+	categoryRepository.GetCategory(&category, id)
+
+	if category.ID == 0 {
+		return responses.ErrorResponse(c, http.StatusNotFound, "Category not found")
+	}
+
+	categoryService := categoryService.NewCategoryService(ch.server.DB)
+	categoryService.Update(&category, updateCategoryRequest)
+
+	return responses.MessageResponse(c, http.StatusOK, "Category has been successfully updated!")
+}
+
 func (ch *CategoryHandlers) DeleteCategory(c echo.Context) error {
 	id, _ := strconv.Atoi(c.Param("id"))
 
