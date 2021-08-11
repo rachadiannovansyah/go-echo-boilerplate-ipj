@@ -37,6 +37,17 @@ func (ch *CategoryHandlers) GetCategories(c echo.Context) error {
 	return responses.Response(c, http.StatusOK, response)
 }
 
+func (ch *CategoryHandlers) GetCategory(c echo.Context) error {
+	var category models.Category
+	id, _ := strconv.Atoi(c.Param("id"))
+
+	categoryRepository := repositories.NewCategoryRepository(ch.server.DB)
+	categoryRepository.GetCategory(&category, id)
+
+	response := responses.NewCategoryReponseOne(category)
+	return responses.Response(c, http.StatusOK, response)
+}
+
 func (ch *CategoryHandlers) CreateCategory(c echo.Context) error {
 	createCategoryRequest := new(requests.CreateCategoryRequest)
 

@@ -21,3 +21,12 @@ func NewCategoryResponse(categories []models.Category) *[]CategoryResponse {
 
 	return &categoryResponse
 }
+
+func NewCategoryReponseOne(category models.Category) *CategoryResponse {
+	categoryReponse := CategoryResponse{
+		Name:        category.Name,
+		Description: category.Description,
+	}
+
+	return &categoryReponse
+}

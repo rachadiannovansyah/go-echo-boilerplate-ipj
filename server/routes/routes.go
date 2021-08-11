@@ -53,4 +53,5 @@ func ConfigureRoutes(server *s.Server) {
 	r.POST("/categories", categoryHandler.CreateCategory)
 	r.PUT("/categories/:id", categoryHandler.UpdateCategory)
 	r.DELETE("/categories/:id", categoryHandler.DeleteCategory)
+	r.GET("/categories/:id", categoryHandler.GetCategory)
 }
